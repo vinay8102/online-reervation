@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Reservation System</title>
+  <link rel="stylesheet" href="reservation.css">
+   <style>
+    /* Style for the login form container */
+    .login-container {
+      background-image: url('https://png.pngtree.com/background/20230429/original/pngtree-cyber-security-concept-data-protection-and-secured-internet-access-background-picture-image_2499693.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh; /* Set the height to cover the entire viewport */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Style for the login form */
+    #loginForm {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+    
+    <div class="login-container">
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+   
+
+    <div id="reservationForm" style="display: none;">
+      <!-- Reservation form content goes here -->
+      <h2>Reservation Form</h2>
+  <form id="reservationFormContent">
+    <input type="text" id="name" placeholder="Name" required><br>
+    <input type="text" id="trainNumber" placeholder="Train Number" required><br>
+    <input type="text" id="trainName" placeholder="Train Name" required><br>
+    <select id="classType" required>
+      <option value="">Select Class Type</option>
+      <option value="First Class">First Class</option>
+      <option value="Second Class">Second Class</option>
+    </select><br>
+    <input type="date" id="dateOfJourney" required><br>
+    <input type="text" id="from" placeholder="From" required><br>
+    <input type="text" id="to" placeholder="To" required><br>
+    <button type="submit">Insert</button>
+  </form>
+    </div>
+
+    <div id="cancellationForm" style="display: none;">
+      <!-- Cancellation form content goes here -->
+      <h2>Cancellation Form</h2>
+  <form id="cancellationFormContent">
+    <input type="text" id="pnr" placeholder="PNR Number" required><br>
+    <button type="submit">Submit</button>
+  </form> 
+    </div>
+  </div>
+
+  <script src="reservation.js"></script>
+</body>
+</html>
+
